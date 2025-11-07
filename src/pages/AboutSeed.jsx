@@ -9,7 +9,7 @@ export default function AboutSeed() {
   };
 
   const footerProps = {
-    title: 'SNS 13기 순장사관학교 - About SEED',
+    title: 'SNS SEED 13기 - About SEED',
     subtitle: '온누리교회 | 믿음으로 산을 옮기는 그룹'
   };
 

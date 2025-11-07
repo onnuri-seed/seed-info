@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 export default function Home() {
   const headerProps = {
-    title: '🌱 SNS 13기 순장사관학교',
+    title: '🌱 SNS CROSS SEED 13기',
     subtitle: '순장님들을 위한 자료 허브',
     showBackButton: false,
     logoSize: 'large'

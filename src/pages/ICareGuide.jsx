@@ -9,7 +9,7 @@ export default function ICareGuide() {
   };
 
   const footerProps = {
-    title: 'SNS 13기 순장사관학교 - 매주 해야하는 일',
+    title: 'SNS SEED 13기 - 매주 해야하는 일',
     subtitle: '온누리교회 | 문서는 지속적으로 업데이트됩니다'
   };
 
@@ -133,7 +133,7 @@ export default function ICareGuide() {
           <h3>📥 iCare 상세 가이드 자료</h3>
           <p><strong>참고:</strong> 12기 자료를 임시로 열람 가능합니다. (13기 자료 준비 중)</p>
           <a
-            href="/assets/documents/SNS 12기 _순장사관학교_서기 says (공유용).pdf"
+            href={`${import.meta.env.BASE_URL}assets/documents/SNS 12기 _순장사관학교_서기 says (공유용).pdf`}
             download
             className="btn"
           >
@@ -143,7 +143,7 @@ export default function ICareGuide() {
             가이드 문서 다운로드
           </a>
           <a
-            href="/assets/documents/SNS 12기 _순장사관학교_서기 says (공유용).pdf"
+            href={`${import.meta.env.BASE_URL}assets/documents/SNS 12기 _순장사관학교_서기 says (공유용).pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn"

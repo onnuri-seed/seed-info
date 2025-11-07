@@ -7,7 +7,7 @@ export default function Header({ title, subtitle, showBackButton = false, logoSi
         <Link to="/" className="nav-back">← 메인으로 돌아가기</Link>
       )}
       <img
-        src="/assets/images/S_03.png"
+        src={`${import.meta.env.BASE_URL}assets/images/S_03.png`}
         alt="SEED Logo"
         className={`logo ${logoSize === 'small' ? 'logo-small' : ''}`}
       />

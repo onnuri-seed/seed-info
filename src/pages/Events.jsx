@@ -9,7 +9,7 @@ export default function Events() {
   };
 
   const footerProps = {
-    title: 'SNS 13기 순장사관학교 - 행사 정보',
+    title: 'SNS SEED 13기 - 행사 정보',
     subtitle: '온누리교회 | 함께 축하하고 기도하는 공동체'
   };
 

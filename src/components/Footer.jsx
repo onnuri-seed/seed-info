@@ -1,7 +1,7 @@
 export default function Footer({ title, subtitle }) {
   return (
     <footer>
-      <p><strong>{title || 'SNS 13기 순장사관학교'}</strong></p>
+      <p><strong>{title || 'SNS CROSS SEED 13기'}</strong></p>
       <p style={{ marginTop: '8px' }}>
         {subtitle || '온누리교회 | 순장님들과 함께 성장하는 공동체'}
       </p>

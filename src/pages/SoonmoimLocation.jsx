@@ -9,7 +9,7 @@ export default function SoonmoimLocation() {
   };
 
   const footerProps = {
-    title: 'SNS 13기 순장사관학교 - 순모임 장소',
+    title: 'SNS SEED 13기 - 순모임 장소',
     subtitle: '온누리교회 | 장소 배정 및 로테이션 안내'
   };
 
@@ -34,7 +34,7 @@ export default function SoonmoimLocation() {
           marginTop: '20px'
         }}>
           <img 
-            src="/assets/images/seed11m.jpg" 
+            src={`${import.meta.env.BASE_URL}assets/images/seed11m.jpg`} 
             alt="순모임 장소 맵" 
             style={{ 
               maxWidth: '100%', 
@@ -44,7 +44,7 @@ export default function SoonmoimLocation() {
           />
           <div style={{ marginTop: '15px' }}>
             <a 
-              href="/assets/images/seed11m.jpg" 
+              href={`${import.meta.env.BASE_URL}assets/images/seed11m.jpg`} 
               download="순모임장소맵.jpg"
               className="btn"
               style={{ marginRight: '10px' }}
@@ -52,7 +52,7 @@ export default function SoonmoimLocation() {
               📥 이미지 다운로드
             </a>
             <a 
-              href="/assets/images/seed11m.jpg" 
+              href={`${import.meta.env.BASE_URL}assets/images/seed11m.jpg`} 
               target="_blank"
               rel="noopener noreferrer"
               className="btn"

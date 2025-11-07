@@ -9,13 +9,13 @@ export default function SoonmoimContents() {
   };
 
   const footerProps = {
-    title: 'SNS 13기 순장사관학교 - 순모임 콘텐츠',
+    title: 'SNS SEED 13기 - 순모임 콘텐츠',
     subtitle: '온누리교회 | 더 많은 자료가 계속 추가됩니다'
   };
 
   const handleShare = async (title, url) => {
     const shareUrl = window.location.origin + url;
-    const shareText = `${title} - SNS 13기 순장사관학교`;
+    const shareText = `${title} - SNS SEED 13기`;
 
     // Web Share API 지원 확인
     if (navigator.share) {
@@ -63,11 +63,11 @@ export default function SoonmoimContents() {
           <span className="resource-type">이미지</span>
           <h3>순모임 10계명</h3>
           <p>건강한 순모임을 위한 10가지 원칙입니다. 순원들과 함께 공유하고 실천해보세요.</p>
-          <a href="/resources/순모임 10계명.jpg" download className="btn-download">
+          <a href={`${import.meta.env.BASE_URL}resources/순모임 10계명.jpg`} download className="btn-download">
             📥 다운로드
           </a>
           <a
-            href="/resources/순모임 10계명.jpg"
+            href={`${import.meta.env.BASE_URL}resources/순모임 10계명.jpg`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-view"
@@ -75,7 +75,7 @@ export default function SoonmoimContents() {
             👁️ 미리보기
           </a>
           <button
-            onClick={() => handleShare('순모임 10계명', '/resources/순모임 10계명.jpg')}
+            onClick={() => handleShare('순모임 10계명', `${import.meta.env.BASE_URL}resources/순모임 10계명.jpg`)}
             className="btn-view"
             style={{ background: '#1EC800', color: 'white' }}
           >
@@ -89,14 +89,14 @@ export default function SoonmoimContents() {
           <span className="resource-type">PDF</span>
           <h3>순모임 ABC</h3>
           <p>순모임의 기본을 담은 가이드북입니다. 순모임 운영의 기초를 다지는 데 도움이 됩니다.</p>
-          <a href="/resources/순모임ABC.pdf" download className="btn-download">
+          <a href={`${import.meta.env.BASE_URL}resources/순모임ABC.pdf`} download className="btn-download">
             📥 다운로드
           </a>
-          <a href="/resources/순모임ABC.pdf" target="_blank" rel="noopener noreferrer" className="btn-view">
+          <a href={`${import.meta.env.BASE_URL}resources/순모임ABC.pdf`} target="_blank" rel="noopener noreferrer" className="btn-view">
             👁️ 열어보기
           </a>
           <button
-            onClick={() => handleShare('순모임 ABC', '/resources/순모임ABC.pdf')}
+            onClick={() => handleShare('순모임 ABC', `${import.meta.env.BASE_URL}resources/순모임ABC.pdf`)}
             className="btn-view"
             style={{ background: '#1EC800', color: 'white' }}
           >
@@ -110,14 +110,14 @@ export default function SoonmoimContents() {
           <span className="resource-type">이미지</span>
           <h3>순원서약서</h3>
           <p>순원으로서의 다짐과 약속을 담은 서약서입니다. 순원들과 함께 작성하고 공유할 수 있습니다.</p>
-          <a href="/resources/순원서약서.jpg" download className="btn-download">
+          <a href={`${import.meta.env.BASE_URL}resources/순원서약서.jpg`} download className="btn-download">
             📥 다운로드
           </a>
-          <a href="/resources/순원서약서.jpg" target="_blank" rel="noopener noreferrer" className="btn-view">
+          <a href={`${import.meta.env.BASE_URL}resources/순원서약서.jpg`} target="_blank" rel="noopener noreferrer" className="btn-view">
             👁️ 미리보기
           </a>
           <button
-            onClick={() => handleShare('순원서약서', '/resources/순원서약서.jpg')}
+            onClick={() => handleShare('순원서약서', `${import.meta.env.BASE_URL}resources/순원서약서.jpg`)}
             className="btn-view"
             style={{ background: '#1EC800', color: 'white' }}
           >

@@ -9,7 +9,7 @@ export default function FirstMeeting() {
   };
 
   const footerProps = {
-    title: 'SNS 13기 순장사관학교 - 첫 순모임 가이드',
+    title: 'SNS SEED 13기 - 첫 순모임 가이드',
     subtitle: '온누리교회 | 서로를 알아가는 소중한 시간'
   };
 
@@ -122,7 +122,7 @@ export default function FirstMeeting() {
         
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
           <img 
-            src="/resources/%EC%88%9C%EB%AA%A8%EC%9E%84%2010%EA%B3%84%EB%AA%85.jpg" 
+            src={`${import.meta.env.BASE_URL}resources/순모임 10계명.jpg`} 
             alt="순모임 십계명" 
             style={{ 
               maxWidth: '100%', 
