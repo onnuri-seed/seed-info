@@ -34,28 +34,27 @@ export default function ICareGuide() {
         <div className="download-section" style={{ background: 'white', padding: '25px', borderRadius: '8px', marginTop: '20px' }}>
           <h3 style={{ marginTop: 0 }}>🔗 출석 체크 링크</h3>
           <p style={{ marginBottom: '20px', color: '#666' }}>
-            <strong style={{ color: '#FF6B6B' }}>⏳ 13기 출석 체크 링크는 현재 준비 중입니다.</strong><br />
-            곧 업데이트될 예정이니 조금만 기다려주세요!
+            아래 버튼을 클릭하여 순모임 출석 체크를 진행해주세요.
           </p>
-          <button
-            disabled
+          <a
+            href="https://bit.ly/sns-cross-sunday-check-22"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn"
-            style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: '10px', 
-              fontSize: '16px', 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              fontSize: '16px',
               fontWeight: 'bold',
-              opacity: 0.5,
-              cursor: 'not-allowed',
-              background: '#ccc'
+              background: '#4A90E2'
             }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
             </svg>
-            준비 중
-          </button>
+            순모임 출석 체크하기
+          </a>
         </div>
       </div>
 
@@ -130,20 +129,9 @@ export default function ICareGuide() {
         </div>
 
         <div className="download-section" style={{ marginTop: '30px' }}>
-          <h3>📥 iCare 상세 가이드 자료</h3>
-          <p><strong>참고:</strong> 12기 자료를 임시로 열람 가능합니다. (13기 자료 준비 중)</p>
+          <h3>📥 iCare 순장사관학교 자료</h3>
           <a
-            href={`${import.meta.env.BASE_URL}assets/documents/SNS 12기 _순장사관학교_서기 says (공유용).pdf`}
-            download
-            className="btn"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            가이드 문서 다운로드
-          </a>
-          <a
-            href={`${import.meta.env.BASE_URL}assets/documents/SNS 12기 _순장사관학교_서기 says (공유용).pdf`}
+            href="https://bit.ly/sns-cross-13th-seogi-says"
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
