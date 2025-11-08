@@ -30,46 +30,27 @@ export default function FirstMeeting() {
           서로를 알아가기 위한 기본 질문들입니다. 편안하게 자신을 소개해주세요!
         </p>
 
-        <div className="features-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-          <div className="feature-card">
-            <h3>1️⃣ 이름</h3>
-            <p>본명과 선호하는 호칭을 소개해주세요</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>2️⃣ 나이 (출생년도)</h3>
-            <p>출생년도나 나이대를 공유해주세요</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>3️⃣ 사는 곳 / 본가</h3>
-            <p>현재 거주지(구 까지)와 본가 위치를 알려주세요</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>4️⃣ 전공 / 직업군</h3>
-            <p>학업이나 직장에서 하고 있는 일을 소개해주세요</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>5️⃣ 나의 성격은?</h3>
-            <p>자신의 성격을 자유롭게 표현해주세요</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>6️⃣ 취미 & 특기</h3>
-            <p>좋아하는 것, 잘하는 것을 나눠주세요</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>7️⃣ 장점 & 단점</h3>
-            <p>솔직하게 자신을 돌아보는 시간</p>
-          </div>
-
-          <div className="feature-card">
-            <h3>8️⃣ 스트레스 해소법</h3>
-            <p>나만의 힐링 방법을 공유해주세요</p>
-          </div>
+        <div style={{ display: 'grid', gap: '20px', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '20px' }}>
+          <img
+            src={`${import.meta.env.BASE_URL}resources/firstShare1.jpg`}
+            alt="나는 어떤 사람인가요 1"
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+            }}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}resources/firstShare2.jpg`}
+            alt="나는 어떤 사람인가요 2"
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+            }}
+          />
         </div>
       </div>
 
