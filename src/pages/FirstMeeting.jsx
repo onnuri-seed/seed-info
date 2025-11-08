@@ -53,27 +53,7 @@ export default function FirstMeeting() {
           />
         </div>
       </div>
-
-      {/* 나의 신앙과 하나님 */}
-      <div className="content-section" style={{ background: 'linear-gradient(135deg, #FFF9E6 0%, #FFE8CC 100%)', padding: '30px', borderRadius: '12px' }}>
-        <h2>🙏 나의 신앙과 하나님</h2>
-        <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
-          <strong>아래 7가지 질문 중 원하는 것 1개만 선택하여</strong> 나눠주세요!
-        </p>
-
-        <div style={{ background: 'white', padding: '25px', borderRadius: '8px' }}>
-          <ul style={{ lineHeight: '2.2', fontSize: '15px' }}>
-            <li><strong>1.</strong> SNS 청년부에 언제 왔는지? 어떻게 오게 되었는지?</li>
-            <li><strong>2.</strong> SNS 청년부는 나에게 어떤 곳인가요?</li>
-            <li><strong>3.</strong> 나에게 예수님은 ___입니다. (이유와 함께)</li>
-            <li><strong>4.</strong> 예수님을 처음 만난 순간 or 교회에 처음 나온 계기</li>
-            <li><strong>5.</strong> 최근(2025년 중) 내가 가장 행복했던 순간</li>
-            <li><strong>6.</strong> 13기 동안 신앙적으로 성장하고 싶은 영역은?</li>
-            <li><strong>7.</strong> 하나님께 감사한 일 or 기도 응답 받은 경험</li>
-          </ul>
-        </div>
-      </div>
-
+      
       {/* 추가 질문 */}
       <div className="content-section">
         <h2>💭 추가 질문</h2>
