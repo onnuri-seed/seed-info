@@ -64,29 +64,6 @@ export default function Home() {
           <p>3기 순모임 장소 맵과 층별 배정, 로테이션 정보를 확인하세요</p>
           <span className="resource-card-status">바로가기</span>
         </Link>
-
-        <Link
-          to="/events"
-          className="resource-card"
-          style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)' }}
-        >
-          <div className="resource-card-icon">📅</div>
-          <h3>행사 정보</h3>
-          <p>생일 파티, 특별 행사 등 순장님들과 함께하는 일정을 확인하세요.</p>
-          <span
-            className="resource-card-status"
-            style={{ background: 'rgba(255, 87, 34, 0.15)', color: '#E64A19' }}
-          >
-            상시 진행
-          </span>
-        </Link>
-        
-        <Link to="/soonmoim-contents" className="resource-card">
-          <div className="resource-card-icon">🎯</div>
-          <h3>순모임 콘텐츠</h3>
-          <p>순모임 10계명, ABC 가이드, 순원서약서 등 필수 자료를 제공합니다.</p>
-          <span className="resource-card-status">바로가기</span>
-        </Link>
       </div>
 {/* 
       <div className="quick-links">

@@ -3,8 +3,6 @@ import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import Home from './pages/Home';
 import ICareGuide from './pages/ICareGuide';
-import Events from './pages/Events';
-import SoonmoimContents from './pages/SoonmoimContents';
 import FirstMeeting from './pages/FirstMeeting';
 import SoonmoimLocation from './pages/SoonmoimLocation';
 import AboutSeed from './pages/AboutSeed';
@@ -33,8 +31,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/icare-guide" element={<ICareGuide />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/soonmoim-contents" element={<SoonmoimContents />} />
         <Route path="/first-meeting" element={<FirstMeeting />} />
         <Route path="/soonmoim-location" element={<SoonmoimLocation />} />
         <Route path="/about-seed" element={<AboutSeed />} />

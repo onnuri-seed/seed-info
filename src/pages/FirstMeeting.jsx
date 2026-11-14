@@ -72,7 +72,7 @@ export default function FirstMeeting() {
             }}
           />
           <img
-            src={`${import.meta.env.BASE_URL}resources/firstShare2.jpg`}
+            src={`${import.meta.env.BASE_URL}resources/firstShare2.jpeg`}
             alt="나는 어떤 사람인가요 2"
             style={{
               width: '100%',
