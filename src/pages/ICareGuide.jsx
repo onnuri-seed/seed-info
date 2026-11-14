@@ -9,7 +9,7 @@ export default function ICareGuide() {
   };
 
   const footerProps = {
-    title: 'SNS SEED 13기 - 매주 해야하는 일',
+    title: 'CROSS SEED 3기 - 매주 해야하는 일',
     subtitle: '온누리교회 | 문서는 지속적으로 업데이트됩니다'
   };
 
@@ -18,26 +18,27 @@ export default function ICareGuide() {
       <div className="info-banner">
         <h2>📢 중요 안내</h2>
         <p>
-          <strong>순모임 후 반드시 아래 2가지를 완료해주세요!</strong><br />
-          순원들을 잘 케어하고 순모임 현황을 공유하기 위해 꼭 필요한 작업입니다.
+          <strong>순모임 후 반드시 아래 출석 체크를 완료하고, iCare에도 정보를 등록해주세요!</strong><br />
+          순원들을 잘 케어하고 순모임 현황을 공유하기 위해 꼭 필요한 작업입니다.<br />
+          iCare 접속 링크는 추후 안내드리겠습니다.
         </p>
       </div>
 
-      {/* 첫 번째 필수 작업: 순모임 출첵 링크 */}
+      {/* 순모임 출첵 링크 */}
       <div className="content-section" style={{ background: 'linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%)', padding: '30px', borderRadius: '12px', marginBottom: '30px' }}>
-        <h2>📝 1. 순모임 출첵 링크 작성</h2>
+        <h2>📝 순모임 출첵 링크 작성</h2>
         <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px', fontSize: '16px' }}>
           순모임이 끝난 후 <strong>출석 체크 설문조사</strong>를 작성해주세요.<br />
           이 링크를 통해 순모임 참석 현황을 빠르게 공유할 수 있습니다.
         </p>
-        
+
         <div className="download-section" style={{ background: 'white', padding: '25px', borderRadius: '8px', marginTop: '20px' }}>
           <h3 style={{ marginTop: 0 }}>🔗 출석 체크 링크</h3>
           <p style={{ marginBottom: '20px', color: '#666' }}>
             아래 버튼을 클릭하여 순모임 출석 체크를 진행해주세요.
           </p>
           <a
-            href="https://bit.ly/sns-cross-sunday-check-22"
+            href="https://forms.gle/67ZwvpAYz5ZiYhjC7"
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
@@ -58,9 +59,9 @@ export default function ICareGuide() {
         </div>
       </div>
 
-      {/* 두 번째 필수 작업: iCare */}
+      {/* iCare */}
       <div className="content-section">
-        <h2>📱 2. iCare 정보 등록</h2>
+        <h2>📱 iCare 정보 등록</h2>
         <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
           iCare는 온누리교회에서 제공하는 순모임 관리 시스템입니다.<br />
           순장님들은 순모임 후 다음 4가지 정보를 등록해주셔야 합니다.
@@ -103,45 +104,6 @@ export default function ICareGuide() {
             </ul>
           </div>
         </div>
-
-        <div className="download-section" style={{ marginTop: '30px', background: 'linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)', padding: '25px', borderRadius: '8px' }}>
-          <h3 style={{ marginTop: 0 }}>🔗 iCare 바로가기</h3>
-          <p style={{ marginBottom: '20px' }}>아래 버튼을 클릭하여 iCare 시스템에 접속하세요:</p>
-          <a
-            href="https://www.ionnuri.org/index.do"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: '10px', 
-              fontSize: '16px', 
-              fontWeight: 'bold',
-              background: '#6B8E23'
-            }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '24px', height: '24px' }}>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-            iCare 시스템 접속하기
-          </a>
-        </div>
-
-        <div className="download-section" style={{ marginTop: '30px' }}>
-          <h3>📥 iCare 순장사관학교 자료</h3>
-          <a
-            href="https://bit.ly/sns-cross-13th-seogi-says"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-            새 탭에서 보기
-          </a>
-        </div>
       </div>
 
       <div className="help-section">
@@ -150,7 +112,7 @@ export default function ICareGuide() {
           📧 순모임 출석 체크나 iCare 사용 중 궁금한 점이 있으면 서기에게 문의해주세요.
         </p>
         <p style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid #e0e0e0' }}>
-          💡 <strong>Tip:</strong> 매주 순모임 후 이 페이지를 방문하여 2가지 필수 작업을 완료하세요!
+          💡 <strong>Tip:</strong> 매주 순모임 후 이 페이지를 방문하여 출석 체크와 iCare 등록을 완료하세요!
         </p>
       </div>
     </Layout>

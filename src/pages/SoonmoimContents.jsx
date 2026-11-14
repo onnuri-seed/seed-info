@@ -9,13 +9,13 @@ export default function SoonmoimContents() {
   };
 
   const footerProps = {
-    title: 'SNS SEED 13기 - 순모임 콘텐츠',
+    title: 'CROSS SEED 3기 - 순모임 콘텐츠',
     subtitle: '온누리교회 | 더 많은 자료가 계속 추가됩니다'
   };
 
   const handleShare = async (title, url) => {
     const shareUrl = window.location.origin + url;
-    const shareText = `${title} - SNS SEED 13기`;
+    const shareText = `${title} - CROSS SEED 3기`;
 
     // Web Share API 지원 확인
     if (navigator.share) {
@@ -52,7 +52,8 @@ export default function SoonmoimContents() {
         <p>
           순장님들께 순모임을 운영하는 데 필요한 핵심 자료들을 제공합니다.
           <br />
-          순모임 10계명부터 ABC 가이드, 순원서약서까지, 각 자료를 다운로드하거나 확인하여 순모임에 활용해보세요.
+          순모임 10계명, 순원서약서 등 각 자료를 다운로드하거나 확인하여 순모임에 활용해보세요.
+          (순모임 ABC는 첫 순모임 가이드 페이지로 이동했습니다)
         </p>
       </div>
 
@@ -76,27 +77,6 @@ export default function SoonmoimContents() {
           </a>
           <button
             onClick={() => handleShare('순모임 10계명', `${import.meta.env.BASE_URL}resources/순모임 10계명.jpg`)}
-            className="btn-view"
-            style={{ background: '#1EC800', color: 'white' }}
-          >
-            💬 공유하기
-          </button>
-        </div>
-
-        {/* 순모임ABC */}
-        <div className="resource-item">
-          <div className="resource-icon">📚</div>
-          <span className="resource-type">PDF</span>
-          <h3>순모임 ABC</h3>
-          <p>순모임의 기본을 담은 가이드북입니다. 순모임 운영의 기초를 다지는 데 도움이 됩니다.</p>
-          <a href={`${import.meta.env.BASE_URL}resources/순모임ABC.pdf`} download className="btn-download">
-            📥 다운로드
-          </a>
-          <a href={`${import.meta.env.BASE_URL}resources/순모임ABC.pdf`} target="_blank" rel="noopener noreferrer" className="btn-view">
-            👁️ 열어보기
-          </a>
-          <button
-            onClick={() => handleShare('순모임 ABC', `${import.meta.env.BASE_URL}resources/순모임ABC.pdf`)}
             className="btn-view"
             style={{ background: '#1EC800', color: 'white' }}
           >
@@ -140,9 +120,6 @@ export default function SoonmoimContents() {
         <ul>
           <li>
             <strong>순모임 10계명</strong>: 순모임 첫 시간이나 오리엔테이션 때 함께 읽고 다짐하기
-          </li>
-          <li>
-            <strong>순모임 ABC</strong>: 새로 들어온 순원이나 순장 교육 자료로 활용하기
           </li>
           <li>
             <strong>순원서약서</strong>: 순원 등록 시 함께 작성하고 서로의 다짐 나누기

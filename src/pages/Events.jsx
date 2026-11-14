@@ -9,14 +9,14 @@ export default function Events() {
   };
 
   const footerProps = {
-    title: 'SNS SEED 13기 - 행사 정보',
+    title: 'CROSS SEED 3기 - 행사 정보',
     subtitle: '온누리교회 | 함께 축하하고 기도하는 공동체'
   };
 
   return (
     <Layout headerProps={headerProps} footerProps={footerProps}>
       <div className="page-title">
-        <h2>SNS 13기 행사 정보</h2>
+        <h2>CROSS SEED 3기 행사 정보</h2>
         <p>생일 파티, 특별 행사 등 순장님들과 함께하는 일정을 안내합니다</p>
       </div>
 

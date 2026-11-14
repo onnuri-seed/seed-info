@@ -1,6 +1,36 @@
 import Layout from '../components/Layout';
 
 export default function FirstMeeting() {
+  const handleShare = async (title, url) => {
+    const shareUrl = window.location.origin + url;
+    const shareText = `${title} - CROSS SEED 3기`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: shareText,
+          text: `${shareText}\n\n`,
+          url: shareUrl
+        });
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('공유 실패:', error);
+          copyToClipboard(shareUrl, title);
+        }
+      }
+    } else {
+      copyToClipboard(shareUrl, title);
+    }
+  };
+
+  const copyToClipboard = (url, title) => {
+    navigator.clipboard.writeText(url).then(() => {
+      alert(`${title} 링크가 클립보드에 복사되었습니다!\n\n카카오톡이나 다른 앱에 붙여넣기 하여 공유하세요.`);
+    }).catch(() => {
+      alert('링크 복사에 실패했습니다. 다시 시도해주세요.');
+    });
+  };
+
   const headerProps = {
     title: '💝 설레는 첫만남',
     subtitle: '첫 순모임을 위한 가이드',
@@ -9,7 +39,7 @@ export default function FirstMeeting() {
   };
 
   const footerProps = {
-    title: 'SNS SEED 13기 - 첫 순모임 가이드',
+    title: 'CROSS SEED 3기 - 첫 순모임 가이드',
     subtitle: '온누리교회 | 서로를 알아가는 소중한 시간'
   };
 
@@ -76,64 +106,126 @@ export default function FirstMeeting() {
 
       {/* 순모임 십계명 */}
       <div className="content-section" style={{ background: 'linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%)', padding: '30px', borderRadius: '12px' }}>
-        <h2>📜 순모임 십계명</h2>
+        <h2>📜 SNS/CROSS 순모임 십계명</h2>
         <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
           건강한 순모임을 위한 약속들을 함께 확인해보세요!
         </p>
-        
-        <div style={{ textAlign: 'center', marginTop: '20px' }}>
-          <img 
-            src={`${import.meta.env.BASE_URL}resources/순모임 10계명.jpg`} 
-            alt="순모임 십계명" 
-            style={{ 
-              maxWidth: '100%', 
-              height: 'auto', 
-              borderRadius: '8px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-            }} 
-          />
+
+        <ol style={{ lineHeight: '1.8', fontSize: '15px', paddingLeft: '20px', color: '#333' }}>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>주일 예배를 드린 후 순모임에 참여합니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>예배 없이 순모임에만 참석하는 것은 지양합니다.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>약속된 순모임 시간을 지킵니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>참여가 어렵거나 늦게 참석하거나 일찍 자리를 떠나야 하는 경우에는 미리 순장님께 알려주세요.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>말씀 중심의 묵상과 삶을 나눕니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>기도로 시작하고, 말씀을 통해 받은 은혜와 삶을 함께 나누어주세요. 마무리에는 서로를 위해 기도해주세요. 순모임 시간에는 불필요한 휴대폰 사용은 자제해 주세요.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>순모임 중에는 서로를 배려해주세요.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>서로의 나눔에 귀를 기울이고, 모든 순원이 고르게 나눌 수 있도록 배려해주세요. 순모임에서 나눈 개인적인 이야기와 기도제목은 모임 밖으로 옮기지 말아주세요. 공격적인 언행과 비난은 삼가주세요.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>이성 간에 오해의 소지가 있는 언행은 삼가주세요.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>밤 10시 이후에는 개인적인 연락을 지양하고, 순모임 안팎에서 서로에게 오해나 부담을 줄 수 있는 언행은 삼가주세요.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>순모임은 모두가 함께 준비합니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>순모임 세팅 및 정리, 간식 준비가 한 사람에게 책임이 집중되지 않도록 자발적으로 참여하고 기쁘게 협력해 주세요.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>순 단톡방은 순장님이 운영합니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>순장님의 공지와 안내에 적극적으로 응답해주세요. 공동체 공지 외에 정보나 자료를 공유하고자 할 때에는 사전에 순장님의 동의를 받아주세요.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>순과 공동체 안에서 금전 거래를 하지 않습니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>개인 판매, 보험 및 다단계 가입 권유, 금전 대여와 차용, 보증 등 모든 종류의 금전 거래를 하지 않습니다.</p>
+          </li>
+          <li style={{ marginBottom: '16px' }}>
+            <strong>장기 무단결석 시 공동체 운영 기준을 따릅니다.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>순장님께 명확한 사유를 알리지 않은 채 5주 이상 순모임에 무단결석하고 순장님의 연락에도 응답하지 않을 경우, 순 단톡방 퇴장 및 제적 등 공동체의 후속 안내를 따라주세요.</p>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>제적 후 6개월 이내에는 공동체에 재등록할 수 없습니다. 다만 순장, 다락방장, 그룹장, 교역자, 양육MC 전원이 동의한 경우에는 예외적으로 재등록할 수 있습니다.</p>
+          </li>
+          <li>
+            <strong>공동체 리더십과 교역자의 안내를 따라주세요.</strong>
+            <p style={{ margin: '6px 0 0', color: '#666' }}>하나님 안에서 아름답고 질서 있는 공동체를 함께 만들어주세요.</p>
+          </li>
+        </ol>
+      </div>
+
+      {/* WE. 너와 내가 하나되는 시간 - QR은 바로 스캔되도록 크게 인라인 노출 */}
+      <div className="content-section" style={{ textAlign: 'center' }}>
+        <h2>🔗 WE. 너와 내가 하나되는 시간</h2>
+        <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
+          아래 QR코드를 바로 스캔하여 참여해보세요.
+        </p>
+        <img
+          src={`${import.meta.env.BASE_URL}assets/images/we-qr.jpeg`}
+          alt="WE. 너와 내가 하나되는 시간 QR"
+          style={{ maxWidth: '320px', width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+        />
+        <div style={{ marginTop: '15px' }}>
+          <a
+            href={`${import.meta.env.BASE_URL}assets/images/we-qr.jpeg`}
+            download
+            className="btn"
+          >
+            📥 이미지 다운로드
+          </a>
         </div>
       </div>
 
-      {/* 추천 활동 */}
-      <div className="content-section">
-        <h2>🌟 추천 활동: 장점 맞추기 게임</h2>
+      {/* 순장사관학교 자료 - 유효기간 있는 한시 자료라 별도 안내 */}
+      <div className="content-section" style={{ background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)', padding: '30px', borderRadius: '12px' }}>
+        <h2>⏳ 순장사관학교 자료 (한시 제공)</h2>
         <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
-          작년 순사관학교에서 매우 좋았던 활동을 추천합니다!
+          순장사관학교 1주차 자료입니다. <strong style={{ color: '#E64A19' }}>유효기간: ~2026. 11. 28</strong>까지만 제공되니 기간 내에 꼭 받아두세요.
         </p>
+        <div style={{ background: 'white', padding: '20px', borderRadius: '8px' }}>
+          <a href={`${import.meta.env.BASE_URL}resources/순장사관학교 1주차.pdf`} download className="btn-download">
+            📥 다운로드
+          </a>
+          <a href={`${import.meta.env.BASE_URL}resources/순장사관학교 1주차.pdf`} target="_blank" rel="noopener noreferrer" className="btn-view">
+            👁️ 열어보기
+          </a>
+          <button
+            onClick={() => handleShare('순장사관학교 1주차', `${import.meta.env.BASE_URL}resources/순장사관학교 1주차.pdf`)}
+            className="btn-view"
+            style={{ background: '#1EC800', color: 'white' }}
+          >
+            💬 공유하기
+          </button>
+        </div>
+      </div>
 
-        <div style={{ background: '#F5F5F5', padding: '25px', borderRadius: '8px' }}>
-          <h3 style={{ marginTop: 0, color: '#6B8E23' }}>🎮 진행 방법</h3>
-          <ol style={{ lineHeight: '2', fontSize: '15px', paddingLeft: '20px' }}>
-            <li>
-              <strong>준비 단계:</strong> 각자 핸드폰으로 자신의 장점 3가지를 적습니다
-              <ul style={{ marginTop: '8px', color: '#666' }}>
-                <li>예: "배려심이 많다", "긍정적이다", "유머 감각이 있다"</li>
-              </ul>
-            </li>
-            <li>
-              <strong>게임 진행:</strong> 돌아가면서 한 명씩 진행합니다
-              <ul style={{ marginTop: '8px', color: '#666' }}>
-                <li>다른 순원들이 그 사람의 장점을 맞춰봅니다</li>
-                <li>본인이 적은 장점을 공개하고 이야기를 나눕니다</li>
-              </ul>
-            </li>
-            <li>
-              <strong>나눔:</strong> 서로의 장점을 발견하고 격려하는 시간을 가집니다
-            </li>
-          </ol>
-
-          <div style={{ 
-            marginTop: '20px', 
-            padding: '15px', 
-            background: 'white', 
-            borderRadius: '8px',
-            borderLeft: '4px solid #6B8E23'
-          }}>
-            <p style={{ margin: 0, color: '#333' }}>
-              💡 <strong>효과:</strong> 서로의 긍정적인 면을 발견하고, 친밀감을 높이며, 
-              순원들이 서로를 더 깊이 이해하는 계기가 됩니다!
-            </p>
+      {/* 순모임 ABC (순모임 콘텐츠에서 이동) */}
+      <div className="content-section">
+        <h2>📚 순모임 ABC</h2>
+        <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
+          순모임의 기본을 담은 가이드북입니다. 순모임 운영의 기초를 다지는 데 도움이 됩니다.
+        </p>
+        <div className="resources-grid">
+          <div className="resource-item">
+            <div className="resource-icon">📚</div>
+            <span className="resource-type">PDF</span>
+            <h3>순모임 ABC</h3>
+            <p>순모임의 기본을 담은 가이드북입니다. 순모임 운영의 기초를 다지는 데 도움이 됩니다.</p>
+            <a href={`${import.meta.env.BASE_URL}resources/순모임ABC.pdf`} download className="btn-download">
+              📥 다운로드
+            </a>
+            <a href={`${import.meta.env.BASE_URL}resources/순모임ABC.pdf`} target="_blank" rel="noopener noreferrer" className="btn-view">
+              👁️ 열어보기
+            </a>
+            <button
+              onClick={() => handleShare('순모임 ABC', `${import.meta.env.BASE_URL}resources/순모임ABC.pdf`)}
+              className="btn-view"
+              style={{ background: '#1EC800', color: 'white' }}
+            >
+              💬 공유하기
+            </button>
           </div>
         </div>
       </div>

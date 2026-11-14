@@ -9,8 +9,8 @@ export default function AboutSeed() {
   };
 
   const footerProps = {
-    title: 'SNS SEED 13기 - About SEED',
-    subtitle: '온누리교회 | 믿음으로 산을 옮기는 그룹'
+    title: 'CROSS SEED 3기 - About SEED',
+    subtitle: '온누리교회 | 씨 뿌리는 사람들'
   };
 
   return (
@@ -18,13 +18,19 @@ export default function AboutSeed() {
       {/* SEED 그룹이란? */}
       <div className="info-banner">
         <h2>🌱 SEED 그룹이란?</h2>
-        <p style={{ fontSize: '18px', lineHeight: '1.8', marginTop: '20px' }}>
-          <strong style={{ color: '#6B8E23', fontSize: '20px' }}>"믿음으로 산을 옮기는 그룹"</strong>
-        </p>
         <p style={{ marginTop: '15px', fontSize: '15px', color: '#555', fontStyle: 'italic' }}>
-          너희에게 거저 시 한 얼만 한 믿음이 있어도<br />
-          이 산을 향해 '여기서 저기로 옮겨 가거라'하면 옮겨 갈 것이요,<br />
-          너희가 못할 일이 없을 것이다. (마 17:20)
+          막4:26-29, 우리말성경<br /><br />
+          26 예수께서 또 말씀하셨습니다. "하나님 나라는 이런 것이다. 어떤 사람이 땅에 씨를 뿌리면<br />
+          27 씨는 그 사람이 자고 있든 깨어 있든 밤낮없이 싹이 트고 자라난다. 그러나 그는 씨가 어떻게 해서 그렇게 되는지 알지 못한다.<br />
+          28 땅이 스스로 곡식을 길러 내는 것이다. 처음에는 줄기가 자라고 다음에는 이삭이 패고 그다음에는 이삭에 알곡이 맺힌다.<br />
+          29 그리고 곡식이 익는 대로 곧 농부가 낫을 댄다. 이제 추수할 때가 됐기 때문이다.
+        </p>
+        <p style={{ fontSize: '18px', lineHeight: '1.8', marginTop: '20px' }}>
+          <strong style={{ color: '#6B8E23', fontSize: '20px' }}>[SEED. 씨 뿌리는 사람들]</strong>
+        </p>
+        <p style={{ marginTop: '15px', fontSize: '15px', color: '#555' }}>
+          씨 뿌리는 사람이 씨앗이 자라 열매 맺기를 기대하며 씨를 뿌리듯, 우리도 우리의 삶으로 살아가는 사람들입니다.
+          당장 변화가 보이지 않아도, 하나님의 때에 자라게 하시고 열매 맺게 하실 것을 신뢰하며 오늘 내 삶에 믿음으로 씨앗을 뿌리는 씨드그룹이 되기를 소망합니다.
         </p>
       </div>
 

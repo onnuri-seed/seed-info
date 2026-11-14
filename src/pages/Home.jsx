@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 export default function Home() {
   const headerProps = {
-    title: '🌱 SNS CROSS SEED 13기',
+    title: '🌱 CROSS SEED 3기',
     subtitle: '순장님들을 위한 자료 허브',
     showBackButton: false,
     logoSize: 'large'
@@ -14,7 +14,7 @@ export default function Home() {
       <div className="welcome-section">
         <h2>순장님, 환영합니다! 👋</h2>
         <p>
-          SNS 13기 순장님들께 필요한 모든 자료와 가이드를 한 곳에서 만나보세요.<br />
+          CROSS SEED 3기 순장님들께 필요한 모든 자료와 가이드를 한 곳에서 만나보세요.<br />
           순모임을 효과적으로 이끌어갈 수 있도록 다양한 자료를 제공합니다.
         </p>
       </div>
@@ -61,7 +61,7 @@ export default function Home() {
         >
           <div className="resource-card-icon">📍</div>
           <h3>순모임 장소</h3>
-          <p>13기 순모임 장소 맵과 층별 배정, 로테이션 정보를 확인하세요</p>
+          <p>3기 순모임 장소 맵과 층별 배정, 로테이션 정보를 확인하세요</p>
           <span className="resource-card-status">바로가기</span>
         </Link>
 
