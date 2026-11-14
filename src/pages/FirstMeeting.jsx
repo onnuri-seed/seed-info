@@ -160,7 +160,7 @@ export default function FirstMeeting() {
       <div className="content-section" style={{ textAlign: 'center' }}>
         <h2>🔗 WE. 너와 내가 하나되는 시간</h2>
         <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '20px' }}>
-          아래 QR코드를 바로 스캔하여 참여해보세요.
+          QR코드를 스캔하거나, 아래 버튼으로 바로 접속해서 참여해보세요.
         </p>
         <img
           src={`${import.meta.env.BASE_URL}assets/images/we-qr.jpeg`}
@@ -169,11 +169,13 @@ export default function FirstMeeting() {
         />
         <div style={{ marginTop: '15px' }}>
           <a
-            href={`${import.meta.env.BASE_URL}assets/images/we-qr.jpeg`}
-            download
+            href="https://m.site.naver.com/2kqng"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn"
+            style={{ background: '#4A90E2' }}
           >
-            📥 이미지 다운로드
+            🔗 바로 접속하기
           </a>
         </div>
       </div>
